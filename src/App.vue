@@ -13,4 +13,17 @@
 </script>
 
 <style lang="scss">
+// ==========================================================================
+//    GENERAL
+// ==========================================================================
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
 </style>
