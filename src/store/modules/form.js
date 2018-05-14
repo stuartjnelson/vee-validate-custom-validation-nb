@@ -1,12 +1,39 @@
 const state = {
-    form: true
+    players: [
+        {
+            id: 0,
+            firstName: 'Simon',
+            secondName: 'Neil',
+            inital: 'SN'
+        },
+        {
+            id: 1,
+            firstName: 'Justin',
+            secondName: 'Vernon',
+            inital: 'BI'
+        }
+    ]
 }
 
 const getters = {
-    getForm: state => state.form
+    getPlayers: state => state.players,
+}
+
+const mutations = {
+    addNewPlayer: (state, payload) => {
+        state.players.push(payload)
+    }
+}
+
+const actions = {
+    addNewPlayer: ({ commit }, payload) => {
+        commit('addNewPlayer', payload)
+    }
 }
 
 export default {
     state,
-    getters
+    getters,
+    mutations,
+    actions
 }
